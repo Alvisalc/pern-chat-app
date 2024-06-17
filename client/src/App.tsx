@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import SignUp from "./pages/Signup"
 import Navbar from "./components/Navbar";
 import { useAuthContext } from "./context/AuthContext";
+import { Toaster } from "react-hot-toast";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             </Routes>
           </div>
         </div>
+        <Toaster/>
       </Router>
       </ThemeProvider>
     </>
