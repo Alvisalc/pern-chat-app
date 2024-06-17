@@ -9,6 +9,7 @@ import {
   } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Link } from "react-router-dom"
 
 
 const Login = () => {
@@ -43,7 +44,9 @@ const Login = () => {
             </div>
         </CardContent>
         <CardFooter>
+            <Link className="w-full" to={"/signup"}>
             <Button className="w-full bg-blue-500 dark:text-white hover:bg-blue-600">Signup</Button>
+            </Link>
         </CardFooter>
     </Card>
   )

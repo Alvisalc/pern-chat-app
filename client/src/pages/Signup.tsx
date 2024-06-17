@@ -11,10 +11,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import GenderCheckbox from "@/components/GenderCheckbox"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 const SignUp = () => {
-
 
     const [selectedGender, setSelectedGender] = useState<"male" | "female" | "">("");
 
@@ -69,7 +69,9 @@ const SignUp = () => {
             </div>
         </CardContent>
         <CardFooter>
-            <Button className="w-full bg-blue-500 dark:text-white hover:bg-blue-600">Back to Login</Button>
+            <Link className="w-full" to={"/login"}>
+                <Button className="w-full bg-blue-500 dark:text-white hover:bg-blue-600">Back to Login</Button>
+            </Link>
         </CardFooter>
     </Card>
   )
