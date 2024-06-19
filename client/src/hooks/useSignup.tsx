@@ -10,10 +10,11 @@ type SignupInputs = {
 	gender: string;
 };
 
+// Custom hook for user Sign Up
 const useSignup = () => {
 	const [loading, setLoading] = useState(false); // track loading status
 	const { setAuthUser } = useAuthContext(); // destructure setAuthUser function from the authentication context
-
+	// Function of SignUp 
 	const signup = async (inputs: SignupInputs) => {
 		try {
 			setLoading(true); // set loading state
@@ -28,7 +29,7 @@ const useSignup = () => {
 			const data = await res.json();
 
 			if (!res.ok) throw new Error(data.error);
-			setAuthUser(data);
+			setAuthUser(data); // update user data
 		} catch (error: any) {
 			console.error(error.message);
 			toast.error(error.message);
