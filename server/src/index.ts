@@ -5,9 +5,11 @@ import authRoutes from "./routes/auth.route.js"
 import messageRoutes from "./routes/message.route.js" 
 
 import dotenv from "dotenv";
+import { app, server } from "./socket/socket.js";
 dotenv.config();
 
-const app = express(); // create instance fo an express application
+const PORT = process.env.PORT || 5000;
+
 
 app.use(cookieParser()); // middleware to parse cookies in incoming requests
 app.use(express.json()); // middleware to parse JSON bodies in incoming requests
@@ -16,10 +18,6 @@ app.use("/api/auth",authRoutes) // authericate routes
 app.use("/api/messages",messageRoutes) // message routes
 
 // server starting on port 5000
-app.listen(5000, ()=>{
-    console.log("Server is running on port 5000")
+server.listen(PORT, ()=>{
+    console.log("Server is running on port " + PORT)
 });
-
-
-// Todo: Add socket.io to the server
-// Todo: configure this server for the deployment

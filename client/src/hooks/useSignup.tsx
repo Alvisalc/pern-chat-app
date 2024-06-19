@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { useAuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
@@ -12,12 +11,13 @@ type SignupInputs = {
 };
 
 const useSignup = () => {
-	const [loading, setLoading] = useState(false);
-	const { setAuthUser } = useAuthContext();
+	const [loading, setLoading] = useState(false); // track loading status
+	const { setAuthUser } = useAuthContext(); // destructure setAuthUser function from the authentication context
 
 	const signup = async (inputs: SignupInputs) => {
 		try {
-			setLoading(true);
+			setLoading(true); // set loading state
+			// POST req to API to signup the user
 			const res = await fetch("/api/auth/signup", {
 				method: "POST",
 				headers: {
