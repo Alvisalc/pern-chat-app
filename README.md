@@ -8,7 +8,7 @@
 <hr/>
 
 <h3>SEE THE DEMO BELOW:</h3>
-<p>Demo Link: <a href="https://pern-chat-app-9ev7.onrender.com/" target="_blank">Demo</a></p>
+<p>Demo Link: <a href="https://pern-chat-app-9ev7.onrender.com/" target="_blank"rel="noopener noreferrer">Demo</a></p>
 <p>username: admin</p>
 <p>password: admin</p>
 
