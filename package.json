@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch server/src --exec ts-node server/src/index.ts"
+    "dev": "nodemon --watch server/src --exec ts-node server/src/index.ts",
+    "build": "tsc && npm install && prisma generate --schema=./server/prisma/schema.prisma && npm install --prefix client && npm run build --prefix client",
+    "start": "node server/dist/src/index.js"
   },
   "type": "module",
   "keywords": [],

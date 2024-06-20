@@ -18,9 +18,14 @@ const Conversation = ({ conversation }: { conversation: ConversationType; }) => 
 			>
 				{/* Avatar section */}
 				<div className={`avatar ${isOnline ? "online" : ""}`}>
-					<div className='w-8 md:w-12 rounded-full'>
+					<div className='w-8 md:w-12 rounded-full overflow-hidden'>
 						<img src={conversation.profilePic} alt='user avatar' />
 					</div>
+					{isOnline && 
+					<div className="online-indicator">
+						<span className="blink"/>
+					</div>
+					}
 				</div>
 				{/* Conversation details */}
 				<div className='flex flex-col flex-1'>
