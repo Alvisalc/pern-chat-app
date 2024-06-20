@@ -20,6 +20,12 @@ app.use("/api/auth",authRoutes) // authericate routes
 app.use("/api/messages",messageRoutes) // message routes
 
 // client => localhost:5173
+if (process.env.NODE_ENV !== "development") {
+    app.use(express.static(path.join(__dirname, "/client/dist")));
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+    })
+}
 // server => localhost:5000
 
 
