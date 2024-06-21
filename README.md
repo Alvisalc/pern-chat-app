@@ -2,7 +2,7 @@
 <p>The PERN Chat App is a simple real-time chat application built using the PERN stack (PostgreSQL, Express, React, Node.js). This application aims to provide a seamless and responsive chatting experience with a backend and an intuitive frontend interface.</p>
 
 ## ✨ Features
-<p>PostgreSQL | Express | React | Node.js | TypeScript | TailwindCSS | Postman | Socket.io</p>
+<p>PostgreSQL | Express | React | Node.js | Vite | TypeScript | TailwindCSS | Postman | Socket.io</p>
 <p>ORM: Prisma</p>
 <p>Serverless Database: Neon</p>
 <p>Deployment: Render</p>
