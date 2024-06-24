@@ -8,7 +8,7 @@
 <p>Deployment: Render</p>
 
 ## 👇 See the demo below:
-<p>Demo Link: <a href="https://pern-chat-app-9ev7.onrender.com/" target="_blank"rel="noopener noreferrer">Demo</a></p>
+<p>Demo Link: <a href="https://pern-chat-app-9ev7.onrender.com/" target="_blank"rel="noopener noreferrer">Demo</a> (Please note: It may take a few seconds to load to connect to the database.)</p>
 <p>username: admin</p>
 <p>password: admin</p>
 
